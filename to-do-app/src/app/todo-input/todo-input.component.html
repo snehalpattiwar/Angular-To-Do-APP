@@ -1,0 +1,9 @@
+<div>
+    <input 
+      type="text" 
+      [(ngModel)]="taskTitle" 
+      placeholder="Add a new task" 
+      (keyup.enter)="onAddTask()">
+    <button (click)="onAddTask()" class="inline-button">Add</button>
+  </div>
+  

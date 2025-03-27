@@ -1,0 +1,14 @@
+<div>
+    <app-todo-input (addTodo)="addTodoHandler($event)"></app-todo-input>
+  </div>
+  
+  <ul>
+    <li *ngFor="let todo of todos" class="task">
+      <app-todo-item 
+        [todo]="todo" 
+        (toggle)="toggleCompletion(todo)" 
+        (delete)="deleteTodoHandler(todo.id)">
+      </app-todo-item>
+    </li>
+  </ul>
+  
